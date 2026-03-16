@@ -1139,7 +1139,7 @@
     "bilstm_hidden": 256,
     "bilstm_layers": 2,
     "backbone": "skeleton_attention_tcn",
-    "epochs": 18,
+    "epochs": 10,
     "frame_step": 2,
     "base_lr": 6e-05,
     "backbone_lr_mult": 0.15,
