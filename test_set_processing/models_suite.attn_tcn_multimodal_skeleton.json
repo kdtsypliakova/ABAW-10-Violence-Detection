@@ -1,0 +1,14 @@
+{
+  "models": [
+    {
+      "name": "skel_attn_tcn_best",
+      "backbone": "skeleton_attention_tcn",
+      "run_dir": "runs/skeleton_attention_tcn 0.76",
+      "threshold": 0.5,
+      "smooth_win": 1,
+      "frame_step": 1,
+      "test_skeleton_root": "skeleton/Test",
+      "backend": "frames"
+    }
+  ]
+}

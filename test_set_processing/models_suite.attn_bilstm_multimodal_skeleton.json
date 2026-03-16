@@ -1,0 +1,14 @@
+{
+  "models": [
+    {
+      "name": "skel_attn_best",
+      "backbone": "skeleton_attention_bilstm",
+      "run_dir": "runs/skeleton_attention_bilstm 0.77 again??",
+      "threshold": 0.5,
+      "smooth_win": 1,
+      "frame_step": 1,
+      "test_skeleton_root": "skeleton/Test",
+      "backend": "frames"
+    }
+  ]
+}

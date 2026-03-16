@@ -1,0 +1,14 @@
+{
+  "models": [
+    {
+      "name": "skel_attn_trainval_20260315_044108",
+      "backbone": "skeleton_attention_bilstm",
+      "run_dir": "runs/skeleton_attention_bilstm_20260315_044108",
+      "threshold": 0.5,
+      "smooth_win": 1,
+      "frame_step": 2,
+      "test_skeleton_root": "skeleton/Test",
+      "backend": "frames"
+    }
+  ]
+}

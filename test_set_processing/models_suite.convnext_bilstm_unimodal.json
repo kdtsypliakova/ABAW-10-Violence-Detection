@@ -1,0 +1,13 @@
+{
+  "models": [
+    {
+      "name": "convnext_bilstm_best",
+      "backbone": "convnext_tiny_bilstm",
+      "run_dir": "runs/convnext_tiny_clip32 0.78",
+      "threshold": 0.5,
+      "smooth_win": 1,
+      "frame_step": 1,
+      "backend": "frames"
+    }
+  ]
+}
