@@ -105,6 +105,26 @@ pip install -r requirements.txt
 
 ---
 
+## Pre-trained Weights
+
+Trained model checkpoints are available on Google Drive:
+
+**[Download weights](https://drive.google.com/drive/folders/1myJ6w4Hjem3D5shoL47zmT8gMr9aQznz?usp=sharing)**
+
+Place the downloaded run directories under `runs/` in the project root so that each folder contains a `best.pt` checkpoint:
+
+```
+runs/
+├── convnext_tiny_clip32_0.78/
+│   ├── best.pt
+│   └── cfg_effective.json
+├── ...
+```
+
+These weights can be used directly for validation (`run_full_val_eval_v2.py`) or test-set inference (`generate_submissions.py`).
+
+---
+
 ## Data Preparation
 
 ### DVD Dataset
