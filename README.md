@@ -216,7 +216,3 @@ Each model produces a folder of per-video `.csv` files (columns: `Frame_Number`,
 Use `single_video_inference_plot.ipynb` to run a trained model on one video and visualise the per-frame predictions alongside ground truth.
 
 ---
-
-## License
-
-Please refer to the EULA signed during competition registration for the DVD dataset usage terms. Code in this repository is provided for research purposes.
