@@ -217,31 +217,6 @@ Use `single_video_inference_plot.ipynb` to run a trained model on one video and 
 
 ---
 
-## Citation
-
-If you use this code, please cite the ABAW competition papers:
-
-```bibtex
-@inproceedings{kollias2025emotions,
-  title={From emotions to violence: Multimodal fine-grained behavior analysis at the 9th ABAW},
-  author={Kollias, Dimitrios and Zafeiriou, Stefanos and Kotsia, Irene and Slabaugh, Greg
-          and Senadeera, Damith Chamalke and Zheng, Jianian and Yadav, Kaushal Kumar Keshlal
-          and Shao, Chunchang and Hu, Guanyu},
-  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
-  year={2025}
-}
-
-@article{kollias2025dvd,
-  title={DVD: A Comprehensive Dataset for Advancing Violence Detection in Real-World Scenarios},
-  author={Kollias, Dimitrios and Senadeera, Damith C and Zheng, Jianian
-          and Yadav, Kaushal KK and Slabaugh, Greg and Awais, Muhammad and Yang, Xiaoyun},
-  journal={arXiv preprint arXiv:2506.05372},
-  year={2025}
-}
-```
-
----
-
 ## License
 
 Please refer to the EULA signed during competition registration for the DVD dataset usage terms. Code in this repository is provided for research purposes.
