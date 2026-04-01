@@ -1,7 +1,7 @@
 {
-  "_comment": "Two-Stream Fusion presets: RGB (ConvNeXt-Tiny) + Optical Flow. Базовые гиперпараметры взяты из лучшей конфигурации (0.7695). Flow backbone = EfficientNet-B0 (легче, flow проще RGB). Нужны предвычисленные flow frames! Includes skeleton multimodal presets.",
+  "_comment": "Two-Stream Fusion presets: RGB (ConvNeXt-Tiny) + Optical Flow. Базовые гиперпараметры взяты из лучшей конфигурации (0.7695). Flow backbone = EfficientNet-B0 (легче, flow проще RGB).",
   "twostream_gated_clip32": {
-    "_desc": "Gated fusion + BiLSTM + clip32 + boundary. Основной кандидат: gated fusion адаптивно балансирует RGB↔flow, минимум лишних параметров.",
+    "_desc": "Gated fusion + BiLSTM + clip32 + boundary.",
     "backbone": "twostream_gated_bilstm",
     "backend": "frames",
     "auto_load_best_after_train": true,
@@ -45,7 +45,7 @@
     "strict_require_flow": true
   },
   "twostream_attention_clip32": {
-    "_desc": "Cross-attention fusion + BiLSTM + clip32 + boundary. Самый мощный fusion: RGB attend-ит на flow и наоборот. Больше параметров, но ловит тонкие cross-modal паттерны.",
+    "_desc": "Cross-attention fusion + BiLSTM + clip32 + boundary. Самый мощный fusion: RGB смотрит на flow и наоборот. Больше параметров, но ловит тонкие cross-modal паттерны.",
     "backbone": "twostream_attention_bilstm",
     "backend": "frames",
     "auto_load_best_after_train": true,
@@ -179,7 +179,7 @@
     "strict_require_flow": true
   },
   "twostream_gated_clip32_longer": {
-    "_desc": "Gated fusion + BiLSTM + clip32 + boundary + 40 эпох. Больше времени на тренировку, два backbone → больше параметров → нужно больше эпох.",
+    "_desc": "Gated fusion + BiLSTM + clip32 + boundary + 40 эпох. Больше времени на тренировку, два backbone -> больше параметров -> нужно больше эпох.",
     "backbone": "twostream_gated_bilstm",
     "backend": "frames",
     "auto_load_best_after_train": true,
@@ -342,7 +342,7 @@
     "use_flow": true,
     "flow_frames_root_train": "flow/Training",
     "flow_frames_root_val": "flow/Validation",
-    "_desc": "Cross-attention fusion + freeze flow 5 эпох. Самый интересный для курсовой — cross-modal attention.",
+    "_desc": "Cross-attention fusion + freeze flow 5 эпох.",
     "backbone": "twostream_attention_bilstm",
     "epochs": 30,
     "base_lr": 3e-05,
@@ -388,7 +388,7 @@
     "use_flow": true,
     "flow_frames_root_train": "flow/Training",
     "flow_frames_root_val": "flow/Validation",
-    "_desc": "Gated + freeze 3 эпохи + 18 эпох (как лучший одномодальный). Минимальное отклонение от проверенной конфигурации.",
+    "_desc": "Gated + freeze 3 эпохи + 18 эпох (как лучший одномодальный).",
     "backbone": "twostream_gated_bilstm",
     "epochs": 18,
     "base_lr": 5e-05,
@@ -435,7 +435,7 @@
     "flow_frames_root_val": "flow/Validation",
     "freeze_rgb_backbone": true,
     "rgb_backbone_checkpoint": "runs/convnext_tiny_bilstm_20260228_173415/best.pt",
-    "_desc": "Gated fusion. RGB заморожен из лучшего чекпоинта (0.7695). Учится только flow + fusion + BiLSTM. Быстро, стабильно.",
+    "_desc": "Gated fusion. RGB заморожен из лучшего чекпоинта (0.7695). Учится только flow + fusion + BiLSTM.",
     "backbone": "twostream_gated_bilstm",
     "epochs": 25,
     "base_lr": 5e-05,
@@ -481,7 +481,7 @@
     "flow_frames_root_val": "flow/Validation",
     "freeze_rgb_backbone": true,
     "rgb_backbone_checkpoint": "runs/convnext_tiny_bilstm_20260228_173415/best.pt",
-    "_desc": "Cross-attention fusion. RGB заморожен. Самый интересный для курсовой: cross-modal attention на DVD-tuned фичах.",
+    "_desc": "Cross-attention fusion. RGB заморожен.",
     "backbone": "twostream_attention_bilstm",
     "epochs": 25,
     "base_lr": 5e-05,
@@ -583,7 +583,7 @@
     "strict_require_skeleton": true
   },
   "skeleton_convnext_tiny_clip32_frozen_rgb": {
-    "_desc": "Skeleton + ConvNeXt Tiny clip32; RGB initialized from best single-stream and frozen (train only skeleton/LSTM/head).",
+    "_desc": "Skeleton + ConvNeXt Tiny clip32; RGB заморожен из лучшего одномодального чекпоинта (разморожены skeleton/LSTM/head).",
     "backend": "frames",
     "auto_load_best_after_train": true,
     "adamw_weight_decay": 0.0005,
@@ -625,7 +625,7 @@
     "strict_require_skeleton": true
   },
   "skeleton_convnext_tiny_clip32_lowlr_unfrozen": {
-    "_desc": "Skeleton + ConvNeXt Tiny clip32; gentle full finetune from best RGB checkpoint.",
+    "_desc": "Skeleton + ConvNeXt Tiny clip32; мягкий полный файнтюн",
     "backend": "frames",
     "auto_load_best_after_train": true,
     "adamw_weight_decay": 0.0005,
@@ -667,7 +667,7 @@
     "strict_require_skeleton": true
   },
   "skeleton_convnext_tiny_clip32_posboost": {
-    "_desc": "Skeleton + ConvNeXt Tiny clip32; stronger positive sampling to push violence recall.",
+    "_desc": "Skeleton + ConvNeXt Tiny clip32; сильнее positive sampling.",
     "backend": "frames",
     "auto_load_best_after_train": true,
     "adamw_weight_decay": 0.0005,
@@ -709,7 +709,7 @@
     "strict_require_skeleton": true
   },
   "skeleton_convnext_tiny_clip32_long": {
-    "_desc": "Skeleton + ConvNeXt Tiny clip32; longer schedule with conservative LR.",
+    "_desc": "Skeleton + ConvNeXt Tiny clip32; больше эпох.",
     "backend": "frames",
     "auto_load_best_after_train": true,
     "adamw_weight_decay": 0.0005,
@@ -751,7 +751,7 @@
     "strict_require_skeleton": true
   },
   "skeleton_convnext_tiny_clip32_battle_v1": {
-    "_desc": "Battle v1: stable skeleton run for shared GPUs; init from best convnext_tiny_clip32, gentle LR, short schedule to catch early peak.",
+    "_desc": "skeleton, shared GPUs; RGB заморожен из лучшей convnext_tiny_clip32, мягкий LR",
     "backend": "frames",
     "auto_load_best_after_train": true,
     "adamw_weight_decay": 0.0005,
@@ -837,7 +837,7 @@
     "fusion_dim": 512,
     "fusion_nhead": 4,
     "fuse_dropout": 0.1,
-    "_desc": "Skeleton + RGB fusion (BiLSTM, default gated). RGB frozen from best convnext_tiny_clip32.",
+    "_desc": "Skeleton + RGB fusion (BiLSTM, default gated). RGB заморожен из лучшей convnext_tiny_clip32.",
     "skeleton_fusion_type": "gated"
   },
   "skeleton_concat_bilstm_clip32_frozen_rgb": {
@@ -883,7 +883,7 @@
     "fusion_dim": 512,
     "fusion_nhead": 4,
     "fuse_dropout": 0.1,
-    "_desc": "Skeleton + RGB concat fusion (BiLSTM). RGB frozen from best convnext_tiny_clip32.",
+    "_desc": "Skeleton + RGB concat fusion (BiLSTM). RGB заморожен из best convnext_tiny_clip32.",
     "skeleton_fusion_type": "concat"
   },
   "skeleton_gated_bilstm_clip32_frozen_rgb": {
@@ -929,7 +929,7 @@
     "fusion_dim": 512,
     "fusion_nhead": 4,
     "fuse_dropout": 0.1,
-    "_desc": "Skeleton + RGB gated fusion (BiLSTM). RGB frozen from best convnext_tiny_clip32.",
+    "_desc": "Skeleton + RGB gated fusion (BiLSTM). RGB заморожен из лучшей convnext_tiny_clip32.",
     "skeleton_fusion_type": "gated"
   },
   "skeleton_attention_bilstm_clip32_frozen_rgb": {
@@ -975,7 +975,7 @@
     "fusion_dim": 512,
     "fusion_nhead": 4,
     "fuse_dropout": 0.1,
-    "_desc": "Skeleton + RGB cross-attention fusion (BiLSTM). RGB frozen from best convnext_tiny_clip32.",
+    "_desc": "Skeleton + RGB cross-attention fusion (BiLSTM). RGB заморожен из лучшей convnext_tiny_clip32.",
     "skeleton_fusion_type": "attention"
   },
   "skeleton_fusion_tcn_clip32_frozen_rgb": {
@@ -1021,7 +1021,7 @@
     "fusion_dim": 512,
     "fusion_nhead": 4,
     "fuse_dropout": 0.1,
-    "_desc": "Skeleton + RGB fusion (TCN, default gated). RGB frozen from best convnext_tiny_clip32.",
+    "_desc": "Skeleton + RGB fusion (TCN, default gated). RGB заморожен из лучшей convnext_tiny_clip32.",
     "skeleton_fusion_type": "gated"
   },
   "skeleton_concat_tcn_clip32_frozen_rgb": {
@@ -1067,7 +1067,7 @@
     "fusion_dim": 512,
     "fusion_nhead": 4,
     "fuse_dropout": 0.1,
-    "_desc": "Skeleton + RGB concat fusion (TCN). RGB frozen from best convnext_tiny_clip32.",
+    "_desc": "Skeleton + RGB concat fusion (TCN). RGB заморожен из лучшей convnext_tiny_clip32.",
     "skeleton_fusion_type": "concat"
   },
   "skeleton_gated_tcn_clip32_frozen_rgb": {
@@ -1113,7 +1113,7 @@
     "fusion_dim": 512,
     "fusion_nhead": 4,
     "fuse_dropout": 0.1,
-    "_desc": "Skeleton + RGB gated fusion (TCN). RGB frozen from best convnext_tiny_clip32.",
+    "_desc": "Skeleton + RGB gated fusion (TCN). RGB заморожен из лучшей convnext_tiny_clip32.",
     "skeleton_fusion_type": "gated"
   },
   "skeleton_attention_tcn_clip32_frozen_rgb": {
@@ -1159,7 +1159,7 @@
     "fusion_dim": 512,
     "fusion_nhead": 4,
     "fuse_dropout": 0.1,
-    "_desc": "Skeleton + RGB cross-attention fusion (TCN). RGB frozen from best convnext_tiny_clip32.",
+    "_desc": "Skeleton + RGB cross-attention fusion (TCN). RGB заморожен из лучшей convnext_tiny_clip32.",
     "skeleton_fusion_type": "attention"
   }
 }
