@@ -1,10 +1,3 @@
-#!/usr/bin/env python3
-"""
-run_full_val_eval_v2.py — stable full-val eval runner.
-
-Loads helper code from exp_backbones_v2.ipynb, then strictly aligns CFG with run_dir
-(cfg_effective.json / cfg_snapshot) so evaluation settings match the trained weights.
-"""
 import argparse
 import json
 from pathlib import Path
