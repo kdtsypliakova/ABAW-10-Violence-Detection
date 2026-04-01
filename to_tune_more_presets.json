@@ -1,8 +1,8 @@
 {
-  "_comment": "Все пресеты на базе лучшей конфигурации: ConvNeXt-Tiny + BiLSTM + clip32 + boundary = 0.7695. Цель: выжать максимум через тюнинг гиперпараметров.",
+  "_comment": "Все пресеты на базе лучшей конфигурации: ConvNeXt-Tiny + BiLSTM + clip32 + boundary = 0.7695.",
 
   "tune_longer_40ep": {
-    "_desc": "Просто больше эпох. 40 вместо 18 → в 2x больше optimizer steps. Модель не успевала сойтись.",
+    "_desc": "Просто больше эпох. 40 вместо 18 -> в 2x больше optimizer steps. Модель не успевала сойтись.",
     "backbone": "convnext_tiny_bilstm",
     "backend": "frames",
     "auto_load_best_after_train": true,
@@ -76,7 +76,7 @@
   },
 
   "tune_smaller_accum": {
-    "_desc": "grad_accum=4 вместо 8 → вдвое больше optimizer steps за эпоху. Effective batch=8 вместо 16.",
+    "_desc": "grad_accum=4 вместо 8 -> вдвое больше optimizer steps за эпоху. Effective batch=8 вместо 16.",
     "backbone": "convnext_tiny_bilstm",
     "backend": "frames",
     "auto_load_best_after_train": true,
@@ -113,7 +113,7 @@
   },
 
   "tune_stronger_boundary": {
-    "_desc": "Boundary weight=3.0, radius=5. Сильнее штраф на переходах violence↔non-violence.",
+    "_desc": "Boundary weight=3.0, radius=5. Сильнее штраф на переходах violence <-> non-violence.",
     "backbone": "convnext_tiny_bilstm",
     "backend": "frames",
     "auto_load_best_after_train": true,
