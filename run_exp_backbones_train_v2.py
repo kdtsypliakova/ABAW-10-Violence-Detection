@@ -1,15 +1,3 @@
-#!/usr/bin/env python3
-"""
-run_exp_backbones_train_v2.py — Упрощённый training script.
-
-Модели вынесены в models.py → скрипт НЕ патчит build_model.
-Остались патчи: аугментации, sampling, loss, optimizer.
-
-Использование:
-    python run_exp_backbones_train_v2.py \
-        --preset r3d_18_v2_conservative \
-        --presets-path improved_presets.json
-"""
 import argparse, json
 from pathlib import Path
 
