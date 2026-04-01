@@ -1377,7 +1377,7 @@
     "fusion_dim": 512,
     "fusion_nhead": 4,
     "fuse_dropout": 0.1,
-    "_desc": "Skeleton + RGB fusion (BiLSTM, default gated). RGB frozen from best convnext_tiny_clip32.",
+    "_desc": "Skeleton + RGB fusion (BiLSTM, default gated). RGB заморожен из лучшей convnext_tiny_clip32.",
     "skeleton_fusion_type": "gated"
   },
   "skeleton_concat_bilstm_clip32_frozen_rgb": {
@@ -1423,7 +1423,7 @@
     "fusion_dim": 512,
     "fusion_nhead": 4,
     "fuse_dropout": 0.1,
-    "_desc": "Skeleton + RGB concat fusion (BiLSTM). RGB frozen from best convnext_tiny_clip32.",
+    "_desc": "Skeleton + RGB concat fusion (BiLSTM). RGB заморожен из лучшей convnext_tiny_clip32.",
     "skeleton_fusion_type": "concat"
   },
   "skeleton_gated_bilstm_clip32_frozen_rgb": {
@@ -1469,7 +1469,7 @@
     "fusion_dim": 512,
     "fusion_nhead": 4,
     "fuse_dropout": 0.1,
-    "_desc": "Skeleton + RGB gated fusion (BiLSTM). RGB frozen from best convnext_tiny_clip32.",
+    "_desc": "Skeleton + RGB gated fusion (BiLSTM). RGB заморожен из лучшей convnext_tiny_clip32.",
     "skeleton_fusion_type": "gated"
   },
   "skeleton_attention_bilstm_clip32_frozen_rgb": {
@@ -1515,7 +1515,7 @@
     "fusion_dim": 512,
     "fusion_nhead": 4,
     "fuse_dropout": 0.1,
-    "_desc": "Skeleton + RGB cross-attention fusion (BiLSTM). RGB frozen from best convnext_tiny_clip32.",
+    "_desc": "Skeleton + RGB cross-attention fusion (BiLSTM). RGB заморожен из лучшей convnext_tiny_clip32.",
     "skeleton_fusion_type": "attention"
   },
   "skeleton_fusion_tcn_clip32_frozen_rgb": {
@@ -1561,7 +1561,7 @@
     "fusion_dim": 512,
     "fusion_nhead": 4,
     "fuse_dropout": 0.1,
-    "_desc": "Skeleton + RGB fusion (TCN, default gated). RGB frozen from best convnext_tiny_clip32.",
+    "_desc": "Skeleton + RGB fusion (TCN, default gated). RGB заморожен из лучшей convnext_tiny_clip32.",
     "skeleton_fusion_type": "gated"
   },
   "skeleton_concat_tcn_clip32_frozen_rgb": {
@@ -1607,7 +1607,7 @@
     "fusion_dim": 512,
     "fusion_nhead": 4,
     "fuse_dropout": 0.1,
-    "_desc": "Skeleton + RGB concat fusion (TCN). RGB frozen from best convnext_tiny_clip32.",
+    "_desc": "Skeleton + RGB concat fusion (TCN). RGB заморожен из лучшей convnext_tiny_clip32.",
     "skeleton_fusion_type": "concat"
   },
   "skeleton_gated_tcn_clip32_frozen_rgb": {
@@ -1653,7 +1653,7 @@
     "fusion_dim": 512,
     "fusion_nhead": 4,
     "fuse_dropout": 0.1,
-    "_desc": "Skeleton + RGB gated fusion (TCN). RGB frozen from best convnext_tiny_clip32.",
+    "_desc": "Skeleton + RGB gated fusion (TCN). RGB заморожен из лучшей convnext_tiny_clip32.",
     "skeleton_fusion_type": "gated"
   },
   "skeleton_attention_tcn_clip32_frozen_rgb": {
@@ -1699,7 +1699,7 @@
     "fusion_dim": 512,
     "fusion_nhead": 4,
     "fuse_dropout": 0.1,
-    "_desc": "Skeleton + RGB cross-attention fusion (TCN). RGB frozen from best convnext_tiny_clip32.",
+    "_desc": "Skeleton + RGB cross-attention fusion (TCN). RGB заморожен из лучшей convnext_tiny_clip32.",
     "skeleton_fusion_type": "attention"
   }
 }
